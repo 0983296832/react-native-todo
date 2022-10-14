@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, TextInput, TouchableOpacity, View } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Input = ({ addTodo }) => {
@@ -9,6 +9,7 @@ const Input = ({ addTodo }) => {
         addTodo(text);
         setText("");
     }
+
 
     return (
         <View style={styles.container}>
