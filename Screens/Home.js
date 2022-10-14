@@ -1,9 +1,10 @@
-import { SafeAreaView, View, FlatList, StyleSheet, Text } from 'react-native'
+import { SafeAreaView, View, FlatList, StyleSheet, ImageBackground } from 'react-native'
 import { v4 as uuidv4 } from 'uuid';
 import Input from '../Components/Input';
 import SingleTodo from '../Components/SingleTodo';
 import { useSelector, useDispatch } from "react-redux"
 import { addTodo } from '../store/action';
+import AppBar from '../Components/AppBar';
 
 const Home = () => {
     const todos = useSelector((state) => state.todos)
@@ -19,10 +20,9 @@ const Home = () => {
     }
 
     return (
-        <SafeAreaView >
-            <View style={styles.bg}>
-            </View>
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'start' }}>
+        <SafeAreaView>
+            <AppBar />
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Input addTodo={onAddTodo} />
                 <View >
                     <FlatList
@@ -32,7 +32,6 @@ const Home = () => {
                     />
                 </View>
             </View>
-
         </SafeAreaView>
     )
 }
@@ -41,13 +40,3 @@ const Home = () => {
 export default Home
 
 
-const styles = StyleSheet.create({
-    bg: {
-        flex: 1,
-        height: "500px",
-        width: 300,
-        backgroundColor: '#6d63ff',
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
-})

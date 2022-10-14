@@ -24,8 +24,6 @@ const store = createStore(rootReducer);
 function App() {
   return (
     <Provider store={store}>
-
-
       <NavigationContainer>
         <Tab.Navigator
           initialRouteName={homeName}
