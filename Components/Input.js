@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
         outLine: "none",
         padding: 10,
         backgroundColor: "white",
-        marginRight: 0
+        marginRight: 0,
+        boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"
     },
     btn: {
         height: 40,
@@ -58,6 +59,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         justifyContent: "center",
         alignItems: "center",
+        boxShadow: "rgba(0, 0, 0, 0.24) 5px 3px 8px"
 
     }
 });
